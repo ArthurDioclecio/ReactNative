@@ -1,30 +1,30 @@
-import CustomButton from "@/components/customButton";
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { View, TextInput, Button, Text, StyleSheet } from "react-native";
+import CustomButton from "@/components/CustomButton";
+import Example from "@/components/Example";
+import Form from "@/components/form";
 
-
-
-export default function HomeScreen(){
-    const valorInicial = 0;
-    const [count, setCount] = useState(valorInicial);
+export default function HomeScrenn() {
+    const [count, setCount] = useState(0);
+    const [nome, setNome] = useState("tutu");
     
+
     return (
         <View>
             <Text>Bem-Vindo ao APP!{count}</Text>
-            <Button 
-            title="aumentar" 
-            onPress={() => {setCount(count+1)}}
-            />
-            <Button 
-            title="diminuir" 
-            onPress={() => {setCount(count-1)}}
-            />
-            <Button 
-            title="voltar" 
-            onPress={() => {setCount(valorInicial)}}
-            />
+            
+            <Button title="Aumentar" onPress={() => {setCount(count +1)}}/>
+            <Button title="Diminuir" onPress={() => {setCount(count -1)}}/>
+            <Button title="Reset" onPress={() => {setCount(count-count)}}/>
 
-            <CustomButton title="pitufina"/>
+                <CustomButton
+                title="a"
+                onPress={() => {setNome('Arthur' + count)}}/>
+                <Text>Bem-Vindo ao APP!{nome}</Text>
+                <Form/>
+                
+                <Text></Text>
+           
         </View>
     );
 }
