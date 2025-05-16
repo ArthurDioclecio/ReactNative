@@ -1,30 +1,14 @@
-import React, { useState } from "react";
-import { View, TextInput, Button, Text, StyleSheet } from "react-native";
-import CustomButton from "@/components/CustomButton";
-import Example from "@/components/Example";
-import Form from "@/components/form";
+import {useRouter} from "expo-router";
+import React from "react";
+import { View, Button } from "react-native";
 
-export default function HomeScrenn() {
-    const [count, setCount] = useState(0);
-    const [nome, setNome] = useState("tutu");
-    
-
-    return (
-        <View>
-            <Text>Bem-Vindo ao APP!{count}</Text>
-            
-            <Button title="Aumentar" onPress={() => {setCount(count +1)}}/>
-            <Button title="Diminuir" onPress={() => {setCount(count -1)}}/>
-            <Button title="Reset" onPress={() => {setCount(count-count)}}/>
-
-                <CustomButton
-                title="a"
-                onPress={() => {setNome('Arthur' + count)}}/>
-                <Text>Bem-Vindo ao APP!{nome}</Text>
-                <Form/>
-                
-                <Text></Text>
-           
-        </View>
-    );
+export default function HomeScreen() {
+    const router = useRouter();
+   return(
+      <View>
+        <Button title="Stack Navigation" onPress={() => router.push('/navigation/stack')}/>
+        <Button title="Tabs Navigation" onPress={() => router.push('/navigation/tabs')}/>
+        <Button title="Drawer Navigation" onPress={() => router.push('/navigation/drawer')}/>
+      </View>
+   );
 }

@@ -36,7 +36,7 @@ export default function Form(){
             
     
 )
-          {*/  function exibirTexto(){
+           function exibirTexto(){
 
                 <View>
                     <Text>
@@ -48,7 +48,7 @@ export default function Form(){
             }
 
 
-*/}
+
 
 
 
