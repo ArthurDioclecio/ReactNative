@@ -1,10 +1,10 @@
 import React from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
-export default function StackDetail(){
+export default function StackDetail() {
     return(
         <View>
-            Tela de Detalhes
+            <Text>Tela de detalhes</Text>
         </View>
     );
 }

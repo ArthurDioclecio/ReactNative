@@ -1,9 +1,10 @@
-import { View } from "react-native";
+import React from "react";
+import { Text, View } from "react-native";
 
-export default  function TabHome(){
-    return (
+export default function TabHome() {
+    return(
         <View>
-            Aba Home
+            <Text>Aba Home</Text>
         </View>
     );
 }

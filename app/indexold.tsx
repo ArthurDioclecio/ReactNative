@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, TextInput, Button, Text, StyleSheet } from "react-native";
 import CustomButton from "@/components/CustomButton";
-import Example from "@/components/Example";
 import Form from "@/components/form";
 
 export default function HomeScrenn() {

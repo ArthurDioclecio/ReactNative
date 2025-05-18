@@ -1,22 +1,22 @@
 import { Tabs } from "expo-router";
-import{ Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
-export default function TabsLayout(){
+export default function TabsLayout() {
     return(
-        <Tabs screenOptions={{ tabBarActiveTintColor: 'purple'}}>
-            <Tabs.Screen
-            name="index"
-            options={{
-                title: 'inicio',
-                tabBarIcon: ({color, size}) => <Ionicons name='home-outline' size={size} color={color}/>
-            }}
-            />
-            <Tabs.Screen
-            name="settings"
-            options={{
-                title: 'configurações',
-                tabBarIcon: ({color, size}) => <Ionicons name='settings-outline' size={size} color={color}/>
-            }}
+        <Tabs screenOptions={{ tabBarActiveTintColor: 'purple' }} >
+                <Tabs.Screen
+                    name="index"
+                    options={{
+                        title: 'Início',
+                        tabBarIcon: ({color, size}) => <Ionicons name='home-outline' size={size} color={color}/>
+                    }}
+                />
+        <Tabs.Screen
+                    name="settings"
+                    options={{
+                        title: 'Configurações',
+                        tabBarIcon: ({color, size}) => <Ionicons name='settings-outline' size={size} color={color}/>
+                    }}
             />
         </Tabs>
     );
